@@ -1,0 +1,79 @@
+
+install rust:
+
+https://www.techrepublic.com/article/how-to-install-rust-on-linux/
+
+
+
+sudo apt install gcc
+sudo apt install curl
+sudo apt install build-essentials
+
+source $HOME/.cargo/env
+source ~/.profile
+
+sudo apt install build-essential
+sudo apt install pkg-config
+sudo apt install libssl-dev
+sudo chown -R $(whoami) $HOME/.cargo/
+
+
+
+
+
+
+python
+pip install flask
+pip install azure
+pip install azure.cosmos
+pip install google
+pip install --upgrade google-api-python-client
+pip install google.cloud
+pip install --upgrade google-cloud-pubsub
+pip install mysql-connector 
+
+
+
+
+
+Puertos creados:
+1000,2000,5000,6000,7000
+python:5000
+rust:6000
+go:7000
+health checker: 2000
+
+
+
+
+
+python
+ export FLASK_APP=/home/benav/python/server.py
+ flask run --host=10.128.0.6
+
+
+python docker:
+
+sudo docker run -d -it -p 10.128.0.7:5000:5000 python-image
+sudo docker run -it -d -p 5000:5000 --name=python-container  python-image
+
+
+
+
+go
+https://www.itzgeek.com/how-tos/linux/debian/how-to-install-go-lang-on-debian-11-debian-10.html
+do not save app in a folder named go
+
+
+
+add scripts:
+startup-script
+
+
+Docker 
+sudo systemctl start docker       (after restarting VM)
+#sudo docker -t python-image .
+#sudo docker run -dit --name python-container -p 5000:80 python-image
+
+
+
